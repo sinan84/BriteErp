@@ -8,6 +8,10 @@ Feature: Login functionality
     When the user enter valid user information
     Then the user should be able to login
 
+  Scenario: Users should be able to login with valid credentials
+    When the user enter valid user information
+    Then the user should be able to login
+
   Scenario: Users shouldn't be able to login with invalid credentials
     When the user enter invalid information
     Then the user shouldn't be able to login
