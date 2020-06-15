@@ -9,10 +9,6 @@ import org.junit.Assert;
 
 public class LoginStepDefs {
 
-    @Given("the user is on the login page")
-    public void the_user_is_on_the_login_page() {
-
-    }
 
     @When("the user enter valid user information")
     public void the_user_enter_valid_user_information() {
@@ -23,6 +19,12 @@ public class LoginStepDefs {
     public void the_user_should_be_able_to_login() {
         System.out.println("Title() = " + Driver.get().getTitle());
         System.out.println("CurrentUrl() = " + Driver.get().getCurrentUrl());
+        Assert.assertEquals("Odoo",Driver.get().getTitle());
+    }
+
+    @When("the user login as {string}")
+    public void the_user_login_as(String string) {
+        new LoginPage().login_as(string);
     }
 
 

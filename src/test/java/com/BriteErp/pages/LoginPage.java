@@ -20,10 +20,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submit;
-
-    @FindBy(xpath = "//*[@id='login_form']/div[1]")
-    public WebElement erorAlert;
-
+    
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
