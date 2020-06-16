@@ -27,5 +27,15 @@ public class LoginStepDefs {
         new LoginPage().login_as(string);
     }
 
+    @When("the user enter {string} and {string}")
+    public void the_user_enter_and(String string, String string2) {
+        new LoginPage().login(string,string2);
+    }
+
+    @Then("the user must see Login and, or password are wrong. message")
+    public void the_user_must_see_Login_and_or_password_are_wrong_message() {
+
+    }
+
 
 }
