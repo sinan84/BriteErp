@@ -2,6 +2,7 @@ package com.BriteErp.pages;
 
 import com.BriteErp.utilities.ConfigurationReader;
 import com.BriteErp.utilities.Driver;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,6 +21,9 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement submit;
+
+    @FindBy(tagName = "p")
+    public WebElement WrongLogin_passwordMessage;
 
 
     public void login(String userNameStr, String passwordStr) {
