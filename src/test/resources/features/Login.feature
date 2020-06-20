@@ -36,7 +36,7 @@ Feature: Login functionality
   @wip
   Scenario Outline: Users shouldn't be able to login with <invalid>
     When the user enter "<userName>" and "<Password>"
-    Then the user must see Login and, or password are wrong. message
+    Then the user must see Wrong login/password. message "<invalid>"
 
     Examples:
       | userName              | Password  | invalid                     |
