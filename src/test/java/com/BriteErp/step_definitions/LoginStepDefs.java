@@ -33,16 +33,15 @@ public class LoginStepDefs {
         new LoginPage().login(string,string2);
     }
 
-    @Then("the user must see Wrong login\\/password. message {string}")
+    @Then("the user must see Wrong login_password. message {string}")
     public void the_user_must_see_Wrong_login_password_message(String string) {
         LoginPage loginPage=new LoginPage();
         if(string.contains("blank")){
+            String expectedValidationMessage="Please fill in this field.";
             if(string.contains("username")){
-                String expectedValidationMessage="Please fill in this field.";
                 String actualValidationMessage = loginPage.userName.getAttribute("validationMessage");
                 Assert.assertEquals("verify please fill in this field message is displayed",expectedValidationMessage,actualValidationMessage);
             }else{
-                String expectedValidationMessage="Please fill in this field.";
                 String actualValidationMessage = loginPage.password.getAttribute("validationMessage");
                 Assert.assertEquals("verify please fill in this field message is displayed",expectedValidationMessage,actualValidationMessage);
             }

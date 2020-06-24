@@ -8,7 +8,7 @@ Feature: Login functionality
 
 
   Scenario: Login as Manufacturing Manager
-    When the user login as "contact"
+    When the user login as "pos"
     Then the user should be able to login
 
 
@@ -29,14 +29,10 @@ Feature: Login functionality
       | event                 |
 
 
-  Scenario: Users shouldn't be able to login with invalid credentials
-    When the user enter invalid information
-    Then the user shouldn't be able to login
 
-  @wip
   Scenario Outline: Users shouldn't be able to login with <invalid>
     When the user enter "<userName>" and "<Password>"
-    Then the user must see Wrong login/password. message "<invalid>"
+    Then the user must see Wrong login_password. message "<invalid>"
 
     Examples:
       | userName              | Password  | invalid                     |
