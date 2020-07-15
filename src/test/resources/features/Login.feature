@@ -1,7 +1,7 @@
 @login
 Feature: Login functionality
 
-
+@smoke
   Scenario: Users should be able to login with valid credentials
     When the user enter valid user information
     Then the user should be able to login
