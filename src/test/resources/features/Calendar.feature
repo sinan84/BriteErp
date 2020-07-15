@@ -7,7 +7,7 @@ Feature: Calendar Module
 @wip
   Scenario: Verify title Calendar
     Then the title should be "Meetings - Odoo"
-
+@smoke
   Scenario: Verify default option of Account Dropdown
     Then Account drop down should have Savings selected
 
