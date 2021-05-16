@@ -4,6 +4,6 @@ Feature: Employees Module
     Given the user login as "Manufacturing_manager"
     And the user navigate the module "Employees"
 
-  @wip
+
   Scenario: Verify title Calendar
     Then the title should be "Employees - Odoo"

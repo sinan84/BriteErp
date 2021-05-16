@@ -6,7 +6,7 @@ Feature: Login functionality
     When the user enter valid user information
     Then the user should be able to login
 
-
+@wip
   Scenario: Login as Manufacturing Manager
     When the user login as "pos"
     Then the user should be able to login
